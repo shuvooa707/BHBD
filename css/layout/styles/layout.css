@@ -2,6 +2,23 @@
 @import url("fontawesome-free/css/fontawesome-all.min.css");
 @import url("framework.css");
 
+
+
+
+
+
+/* -------------------------CSS code for Making the navbar fixed at the top---------------------------- */
+
+#sticky {
+  position: fixed;
+  top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+/* -------------------------CSS code for blood request page---------------------------- */
+
+
 /* -------------------------CSS code for blood request page---------------------------- */
 
 	.blood_request_container{

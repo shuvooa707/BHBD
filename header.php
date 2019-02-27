@@ -23,13 +23,32 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <!-- Latest compiled JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    window.onscroll = function() {
+          myFunction()
+    };
 
+    window.onload = function(){
+    	navbar = document.getElementsByClassName("row1")[0];
+    	row2 = document.getElementsByClassName("row2")[0];
+    	sticky = navbar.offsetTop;
+    }
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.setAttribute("id","sticky");
+      } else {
+        navbar.removeAttribute("id");
+      }
+    }
+</script>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row0">
+
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="one_quarter first">
@@ -50,6 +69,8 @@ Licence URI: https://www.os-templates.com/template-terms
     </div>
     <!-- ################################################################################################ -->
   </header>
+
+
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
