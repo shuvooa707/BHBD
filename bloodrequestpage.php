@@ -85,7 +85,7 @@
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
 										<select id="bloodgroup" class="form-control">	
-											<option value="0">Select Your Bllod Group</option>
+											<option value="0">Select Blood Group</option>
 											<option value="A+">A+</option>
 											<option value="A-">A-</option>
 											<option value="B+">B+</option>
@@ -103,7 +103,11 @@
 								<input type="date" name="date" id="date" class="form-control input-sm" placeholder="Enter Date You Need Within">								
 							</div>
 							<div class="form-group">
-								<input type="text" name="age" id="age" class="form-control input-sm" placeholder="Enter Your Age">								
+								<input type="text" name="age" id="age" class="form-control input-sm" placeholder="Enter Blood Takers Age">								
+							</div>
+							
+							<div class="form-group">
+								<input type="text" name="quantity" id="quantity" class="form-control input-sm" placeholder="Enter Blood Quntity">								
 							</div>
 							
 							<div class="form-group">
@@ -115,8 +119,8 @@
 							</div>
 							
 							<div class="form-group">																
-								<label for="reason">Reason:</label>
-								<textarea class="form-control" rows="5" id="reason"></textarea>							
+								<label for="reason">Reason : </label>
+								<textarea class="form-control" rows="5" id="reason" placeholder="Write Why You Need Blood.  The Stronger Your Words are The More Likely Somebody Will Want to Donate..."></textarea>							
 							</div>
 							
 
@@ -144,12 +148,13 @@
 		age = document.getElementById("age").value;
 		gender = document.getElementById("gender").value;
 		phone = document.getElementById("phone").value;
+		quantity = document.getElementById("quantity").value;
 		bloodgroup = document.getElementById("bloodgroup").value;
 		reason = document.getElementById("reason").value;
 
 		//console.log(address, date, age, gender, phone, bloodgroup, reason);
-		if( address && date && age && gender && phone && bloodgroup && reason ){
-			match(address, date, age, gender, phone, bloodgroup, reason);		
+		if( address && date && age && gender && phone && bloodgroup && reason && quantity ){
+			match(address, date, age, gender, phone, bloodgroup, reason, quantity);		
 		}	
 		else {
 			Swal.fire({
@@ -160,10 +165,10 @@
 		}
 	}
 
-	function match(address, date, age, gender, phone, bloodgroup, reason) {
+	function match(address, date, age, gender, phone, bloodgroup, reason, quantity) {
 
-        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason;
-        //console.log(tmp);
+        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason + "&quantity=" + quantity + "&requester=" + reason;
+        console.log(tmp);
 		var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

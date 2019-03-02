@@ -23,6 +23,25 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <!-- Latest compiled JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+    #upp_container{
+        width:600px;
+        height:500px;
+        margin:100px 0px 100px 0px;
+        background:#eeeeee;
+        border-radius:5px;
+        border:1px solid #aaa;
+        position:relative;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    #upp_propic{
+        width:100px;
+        height:100px;
+        border:5px solid white;
+        background:red;
+    }
+</style>
 <script type="text/javascript">
     var sticky = "";
     var navbar = document.createElement("div");
@@ -85,7 +104,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <li class="active"><a href="index.php">Home</a></li>   
         <li><a href="bloodbank.php">Blood Bank</a></li>
         <li><a href="donorlist.php">Donor List</a></li>
-        <li><a href="login.php">Login</a></li>
+        <li><a href="Login.php">Login</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="about.php">About</a></li>
       </ul>
@@ -106,3 +125,20 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </section>
 </div>
+<div class="wrapper row2">
+    <div id="upp_container">
+        <div id="upp_propic"></div>
+        <div id="upp_bloodgiven"></div>
+        <div id="upp_bloodgroup"></div>
+        <div id="upp_detail">
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<?php include('footer.php'); ?>

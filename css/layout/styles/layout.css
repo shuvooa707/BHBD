@@ -3,7 +3,36 @@
 @import url("framework.css");
 
 
+#requestpagerequest{
+}
 
+#requestpagerequest .col-lg-5{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#requestpagerequest .donorplate {
+	background: white;
+	border-bottom: 2px solid #474747;
+	transition-duration: .1s;
+}
+
+#requestpagerequest .donorplate:hover {
+	box-shadow: 2px 2px 10px #ccc;
+}
+
+#requestpagerequest .donorplate .img{
+	width: 25%;
+	height: 100px;
+	background: #2196F3;
+}
+#requestpagerequest .donorplate .info{
+	width: 75%;
+	height: 100px;
+	background: #eeeeee;
+	color:black;
+}
 
 
 

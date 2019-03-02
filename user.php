@@ -91,8 +91,7 @@
 				var bgp = document.getElementById("bloodgivenplate");
 				bgp.innerHTML="<span style='background:#00000012; width:100%; text-align:center; height:24px; color:black; margin-bottom:10px; display:block;'>Blood Given </span><br><center><span style='font-size:40px;line-height:0px;color:#28a745;'>"+da[i].split(":")[1].toUpperCase()+"</span></center>";
 			}
-       }
-        
+       }        
     }
     window.onload = main();
 </script>
