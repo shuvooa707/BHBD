@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <!--
 Template Name: Wavefire
@@ -106,3 +110,5 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </section>
 </div>
+
+<!-- Will it work -->

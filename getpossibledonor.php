@@ -12,8 +12,9 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     
-       
+    
     $sql = "SELECT blood_group FROM request_board WHERE requester='".$uname."'";
+    echo $sql;
     $result = $conn->query($sql);
     
     $blood_group = "";

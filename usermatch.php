@@ -13,7 +13,8 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     
-    $sql = "SELECT password FROM user_data_table WHERE userName='".$uname."'";
+    $sql = "SELECT password FROM user_data_table WHERE userName='$uname'";
+    //echo $sql;
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
@@ -21,9 +22,13 @@
         while($row = $result->fetch_assoc()) {
             if( $pass == $row["password"] ) {
                 echo "1111";
+                session_start();
+                $_SESSION["uname"] = $_REQUEST["uname"];
+                //echo $_SESSION["uname"];
                 return 0;
             } else {
                 echo "2222";
+                //echo $pass;
                 return 0;
             }
         }

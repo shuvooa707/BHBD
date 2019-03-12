@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-    
-?>
 
 <?php include('header.php'); ?>
 <!-- ################################################################################################ -->
@@ -34,7 +30,7 @@
 				}
             }
         };
-        xmlhttp.open("GET", "getpossibledonor.php?uname=shuvo", true);
+        xmlhttp.open("GET", "getpossibledonor.php?uname=<?php echo $_SESSION["uname"];?>", true);
         xmlhttp.send();
     } main();
 	function manDom(data){
@@ -60,15 +56,12 @@
                                 <div class="col-lg-8 info">
                                     <h4>${userList[i].Name}</h4>
                                     <p><i>${userList[i].age}+, ${userList[i].gender}</i></p>
-                                    <p><i>${userList[i].address}</i>    <span style="color:gray; font-weight:bold;">,1 km</span> </p>
-                                    
+                                    <p><i>${userList[i].address}</i>    <span style="color:gray; font-weight:bold;">,1 km</span> </p>                                    
                                 </div>
                             </div>
-                        </a>`;
-            
+                        </a>`;            
             append.innerHTML += node;
         }
-
     }
 </script>
 

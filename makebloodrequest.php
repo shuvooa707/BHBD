@@ -1,6 +1,6 @@
 <?php 
     $address = $_REQUEST["address"];
-    $requester = $_REQUEST["requester"];
+    $requester = $_SESSION["uname"];
     $phone = $_REQUEST["phone"];
     $bloodgroup = $_REQUEST["bloodgroup"];
     $date = $_REQUEST["date"];
