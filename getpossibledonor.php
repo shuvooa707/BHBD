@@ -14,7 +14,7 @@
     
     
     $sql = "SELECT blood_group FROM request_board WHERE requester='".$uname."'";
-    echo $sql;
+    //echo $sql;
     $result = $conn->query($sql);
     
     $blood_group = "";

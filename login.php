@@ -62,7 +62,7 @@
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				if( xmlhttp.responseText == "1111" ) {
-					console.log(xmlhttp.responseText);
+					alert(xmlhttp.responseText);
 					next();
 				} else if( xmlhttp.responseText == "2222" ){
 					console.log(xmlhttp.responseText);

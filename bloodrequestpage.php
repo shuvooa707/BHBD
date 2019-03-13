@@ -167,12 +167,12 @@
 
 	function match(address, date, age, gender, phone, bloodgroup, reason, quantity) {
 
-        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason + "&quantity=" + quantity + "&requester=" + reason;
-        console.log(tmp);
+        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason + "&quantity=" + quantity + "&requester=" + $_SESSION;
+        //console.log(tmp);
 		var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					console.log(xmlhttp.responseText);
+					//console.log(xmlhttp.responseText);
 				if( xmlhttp.responseText == "success" ) {
 					next();
 				} else if( xmlhttp.responseText == "2222" ){
