@@ -50,7 +50,7 @@
         var append = document.querySelector(".col-lg-5");
 
         for(var i=0;i<userList.length;i++){
-            var node = `<a href="user.php?user=${userList[i].userName}">
+            var node = `<a href="matcheduser.php?user=${userList[i].userName}">
                             <div class="row donorplate">
                                 <div class="col-lg-2 img"></div>
                                 <div class="col-lg-8 info">

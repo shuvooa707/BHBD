@@ -85,14 +85,13 @@ Licence URI: https://www.os-templates.com/template-terms
   <section class="hoc clear"> 
     <!-- ######################################   Navigation bar #################################### -->
     <nav id="mainav">
-      <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>   
-        <li><a href="bloodbank.php">Blood Bank</a></li>
-        <li><a href="donorlist.php">Donor List</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="signup.php">Sign Up</a></li>
-        <li><a href="about.php">About</a></li>
-      </ul>
+        <ul class="clear">
+          <li class="active"><a href="index.php">Home</a></li>   
+          <li><a href="donorlist.php">Donor List</a></li>
+          <li><a href="login.php">Login</a></li>
+          <li><a href="signup.php">Sign Up</a></li>
+          <li><a href="about.php">About</a></li>
+        </ul>
     </nav>
     <!-- ################################################################################################ -->
     <span id="usergoto" style="visibility: hidden;border-radius: 30px;width: 61px;height: 61px;background: #f8f9fa;z-index: 10;position: absolute;left: 65%;"></span>

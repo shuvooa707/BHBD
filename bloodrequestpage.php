@@ -1,4 +1,13 @@
+
 <?php include('header.php'); ?>
+<?php 
+	if(isset($_SESSION["uname"])){
+
+	} else {
+		header('Location: login.php');
+	}
+?>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -71,7 +80,19 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-ms-12">
 									<div class="form-group">
-										<input type="text" name="location" id="location" class="form-control input-lg" placeholder="Enter You Address">										
+										<select name="location" id="location" class="form-control">
+											<option value="0">    Select Your Location</option>
+											<option value="badda">Badda</option>
+											<option value="uttara">Uttara</option>
+											<option value="banani">Banani</option>
+											<option value="gulshan">Gulshan</option>
+											<option value="matijhil">Matijhil</option>
+											<option value="gulisthan">Gulisthan</option>
+											<option value="shamoly">Shamoly</option>
+											<option value="mohammadpur">Mohammadpur</option>
+											<option value="panthapath">Panthapath</option>
+											<option value="gabtali">Gabtali</option>
+										</select>									
 									</div>
 								</div>
 
@@ -167,12 +188,12 @@
 
 	function match(address, date, age, gender, phone, bloodgroup, reason, quantity) {
 
-        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason + "&quantity=" + quantity + "&requester=" + $_SESSION;
+        var tmp = "makebloodrequest.php?address=" + address + "&date=" + date + "&age=" + age + "&gender=" + gender + "&phone=" + phone + "&bloodgroup=" + bloodgroup + "&reason=" + reason + "&quantity=" + quantity + "&requester=" + "<?php echo $_SESSION["uname"]; ?>" ;
         //console.log(tmp);
 		var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					//console.log(xmlhttp.responseText);
+					console.log(xmlhttp.responseText);
 				if( xmlhttp.responseText == "success" ) {
 					next();
 				} else if( xmlhttp.responseText == "2222" ){

@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $address = $_REQUEST["address"];
     $requester = $_SESSION["uname"];
     $phone = $_REQUEST["phone"];

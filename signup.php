@@ -98,7 +98,7 @@
 								
 								<div class="col-xs-6 col-sm-6 col-ms-6">
 									<div class="form-group">
-										<input type="re-password" name="re-password" id="re-password" class="form-control input-sm" placeholder="Re-type Password">
+										<input type="password" name="re-password" id="re-password" class="form-control input-sm" placeholder="Re-type Password">
 										
 									</div>
 								</div>
