@@ -36,6 +36,7 @@
 	function manDom(data){
         userList = [];
         tmpUser = {};
+        data = data.substr(2,data.length);
         d = data.split("|");
         for(var i=0;i<d.length-1;i++){
             var x = d[i].split(",");
@@ -56,7 +57,7 @@
                                 <div class="col-lg-8 info">
                                     <h4>${userList[i].Name}</h4>
                                     <p><i>${userList[i].age}+, ${userList[i].gender}</i></p>
-                                    <p><i>${userList[i].address}</i>    <span style="color:gray; font-weight:bold;">,1 km</span> </p>                                    
+                                    <p><i>${userList[i].address}</i>    <span style="color:gray; font-weight:bold;">,${userList[i].distance} km</span> </p>                                    
                                 </div>
                             </div>
                         </a>`;            

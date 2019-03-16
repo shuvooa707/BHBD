@@ -146,7 +146,21 @@
 							</div>
 							
 							<div class="form-group">
-								<input type="text" name="address" id="address" class="form-control input-sm" placeholder="Enter your Address">								
+								<div class="form-group">
+										<select name="location" id="address" class="form-control">
+											<option value="0">    Select Your Location</option>
+											<option value="badda">Badda</option>
+											<option value="uttara">Uttara</option>
+											<option value="banani">Banani</option>
+											<option value="gulshan">Gulshan</option>
+											<option value="matijhil">Matijhil</option>
+											<option value="gulisthan">Gulisthan</option>
+											<option value="shamoly">Shamoly</option>
+											<option value="mohammadpur">Mohammadpur</option>
+											<option value="panthapath">Panthapath</option>
+											<option value="gabtali">Gabtali</option>
+										</select>									
+									</div>								
 							</div>
 
 							<input type="button" value="Register" class="btn btn-info btn-block" onclick="signup()" >
