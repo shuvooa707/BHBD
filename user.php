@@ -9,7 +9,16 @@
 			<div id="bloodRequestButton">
 				<a href="bloodrequestpage.php">Request For Blood</a>
             </div>
-
+            <a href="<?php echo "requestpage.php" ?>">
+                <div id="currentRequest">
+                    See Current Requests
+                </div>
+            </a>
+            <a href="signout.php">
+                <div id="signoutbutton">
+                    Sign Out
+                </div>
+            </a>
 		</div>
 
         <div id="datatable" class="row">
@@ -41,7 +50,7 @@
 				}
             }
         };
-        xmlhttp.open("GET", "getData.php?uname=<?php echo $_REQUEST["user"] ?>", true);
+        xmlhttp.open("GET", "getData.php?uname=<?php echo $_SESSION["uname"] ?>", true);
         xmlhttp.send();
     }
 	

@@ -41,30 +41,32 @@
        var td2 = document.createElement("td");
 
         for(i=0;i<da.length-1;i++){
-            var tr = document.createElement("tr");
-            var td1 = document.createElement("td");
-            var td2 = document.createElement("td");
-            td1.innerHTML=da[i].split(":")[0].toUpperCase();
+            if(da[i].split(":")[0].toUpperCase()!="PASSWORD"){
+                var tr = document.createElement("tr");
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                td1.innerHTML=da[i].split(":")[0].toUpperCase();
 
-            td1.style.paddingTop="5px";
-            td1.style.paddingBottom="5px";
-            td1.style.paddingLeft="10px";
-            td1.style.background = "#000000c2";
-            td1.style.color="white";
-            td1.style.fontWeight="bold";
-            td1.style.fontSize="20px";
-            tr.appendChild(td1);
+                td1.style.paddingTop="5px";
+                td1.style.paddingBottom="5px";
+                td1.style.paddingLeft="10px";
+                td1.style.background = "#000000c2";
+                td1.style.color="white";
+                td1.style.fontWeight="bold";
+                td1.style.fontSize="20px";
+                tr.appendChild(td1);
 
-            var td2 = document.createElement("td");
-			td2.style.fontWeight="bold";
-			td2.style.color="#020101";
-            td2.style.paddingLeft="10px";
-            td2.style.paddingTop="20px";
-            td2.innerHTML=da[i].split(":")[1];
-            tr.appendChild(td2);
-            
-            table = document.getElementsByTagName("table")[0];
-            table.appendChild(tr);
+                var td2 = document.createElement("td");
+                td2.style.fontWeight="bold";
+                td2.style.color="#020101";
+                td2.style.paddingLeft="10px";
+                td2.style.paddingTop="20px";
+                td2.innerHTML=da[i].split(":")[1];
+                tr.appendChild(td2);
+                
+                table = document.getElementsByTagName("table")[0];
+                table.appendChild(tr);
+            }
        }        
     }
     window.onload = main();

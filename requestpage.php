@@ -7,6 +7,9 @@
   <section class="hoc container clear" style="min-height:600px; max-height:800px; overflow:scroll"> 
     <!-- ################################################################################################ -->
             <div class="row" id="requestpagerequest">
+                <div id="requestpagerequest_heading">
+                    <h4>People In Our Database Who Has The Same Blood Group</h4>
+                </div>
                 <div class="col-lg-5">
                     
                 </div>
@@ -57,7 +60,7 @@
                                 <div class="col-lg-8 info">
                                     <h4>${userList[i].Name}</h4>
                                     <p><i>${userList[i].age}+, ${userList[i].gender}</i></p>
-                                    <p><i>${userList[i].address}</i>    <span style="color:gray; font-weight:bold;">,${userList[i].distance} km</span> </p>                                    
+                                    <p><i>${userList[i].address}</i>    ,<span style="color:red; font-weight:bold;">${userList[i].distance} km</span> </p>                                    
                                 </div>
                             </div>
                         </a>`;            

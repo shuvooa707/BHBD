@@ -4,7 +4,7 @@
     $username = "bhbltd";
     $password = "abcd";
     $dbname = "bloodhubbd";
-    
+    session_start();
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -18,6 +18,7 @@
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
+            $_SESSION["name"] = $row["Name"];
             foreach($row as $x => $x_value) {
                 echo $x . ":" . $x_value . ",";
             }

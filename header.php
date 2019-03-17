@@ -86,11 +86,17 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ######################################   Navigation bar #################################### -->
     <nav id="mainav">
         <ul class="clear">
-          <li class="active"><a href="index.php">Home</a></li>   
-          <li><a href="donorlist.php">Donor List</a></li>
-          <li><a href="login.php">Login</a></li>
-          <li><a href="signup.php">Sign Up</a></li>
+          <li class="active"><a href="index.php">Home</a></li>  
           <li><a href="about.php">About</a></li>
+          <?php 
+              if(!isset($_SESSION["uname"])){
+                  echo '<li><a href="login.php">Login</a></li>
+                        <li><a href="signup.php">Sign Up</a></li>';
+              } else {
+                  echo '<li style="background:green; height:100%"><a style="background:green;" href="user.php">'.$_SESSION['name']."</a></li>";
+              }
+              
+          ?>
         </ul>
     </nav>
     <!-- ################################################################################################ -->
